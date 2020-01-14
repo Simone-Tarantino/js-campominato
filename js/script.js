@@ -12,8 +12,10 @@ var youLoseList = [];
 for (var r = 0; r < 16; r++) {
   var cpuRandomNum = getRandomNum(1, 100);
   youLoseList.push(cpuRandomNum);
+  console.log(cpuRandomNum);
 }
 console.log(youLoseList);
+
 
 var sameNum = false;
 for (var i = 0; i < 84; i++) {
