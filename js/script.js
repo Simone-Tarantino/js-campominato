@@ -8,5 +8,5 @@ function getRandomNum(min, max) {
   return random;
 }
 
-var cpuRandomNum = getRandomNum(1, 16);
+var cpuRandomNum = getRandomNum(1, 100);
 console.log(cpuRandomNum);
