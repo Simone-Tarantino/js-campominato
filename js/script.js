@@ -15,4 +15,22 @@ for (var r = 0; r < 16; r++) {
 }
 console.log(youLoseList);
 
-var userNum = prompt("Inserisci un numero");
+var sameNum = false;
+for (var i = 0; i < 84; i++) {
+  if (sameNum == false) {
+    var userNum = parseInt(prompt("Numero"));
+    for (var j = 0; j < youLoseList.length; j++) {
+      if (userNum == youLoseList[j]) {
+        sameNum = true;
+        j = youLoseList.length;
+      } else {
+        sameNum = false;
+      }
+    }
+  } else {
+    i = 84;
+  }
+}
+if (sameNum == true) {
+  console.log("Hai perso");
+}
