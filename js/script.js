@@ -8,5 +8,11 @@ function getRandomNum(min, max) {
   return random;
 }
 
-var cpuRandomNum = getRandomNum(1, 100);
-console.log(cpuRandomNum);
+var youLoseList = [];
+for (var r = 0; r < 16; r++) {
+  var cpuRandomNum = getRandomNum(1, 100);
+  youLoseList.push(cpuRandomNum);
+}
+console.log(youLoseList);
+
+var userNum = prompt("Inserisci un numero");
