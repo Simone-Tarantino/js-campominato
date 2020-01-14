@@ -28,9 +28,7 @@ for (var i = 0; i < 84; i++) {
       }
     }
   } else {
+    console.log("Game Over. Il tuo punteggio è di " + i);
     i = 84;
   }
-}
-if (sameNum == true) {
-  console.log("Hai perso");
 }
