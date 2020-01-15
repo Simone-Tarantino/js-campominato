@@ -36,10 +36,30 @@ var userNumList = [];
 // generare 16 numeri random
 while (randomNumList.length < 16) {
   var randomNum = genRandomNum(1, 100);
-  console.log(randomNum);
+  // evitare ripetizione di numeri nell'array
   var alreadyIn = isInArray(randomNumList, randomNum);
   if (alreadyIn == false){
     randomNumList.push((randomNum));
   }
 }
 console.log(randomNumList.sort());
+
+// variabile per il numero di tentativi per difficoltà
+var attempts = 0;
+var maxAttemptsEz = 10;
+
+// faccio inserire numero all'utente
+do {
+  var userNum = parseInt(prompt("Inserisci un numero da 1 a 100"));
+  var youWin = isInArray(randomNumList, userNum);
+  userNumList.push(userNum);
+  attempts++;
+  // se il numero che inserisce è presente nella lista dei numeri random il gioco finisce
+  if (youWin == true) {
+    alert("Game Over. Il tuo punteggio è di " + (attempts - 1));
+    console.log(userNumList);
+  } else if (attempts == maxAttemptsEz) {
+    alert("Complimenti! Hai ottenuto il punteggio massimo");
+    youWin = true;
+  }
+} while (youWin == false);
